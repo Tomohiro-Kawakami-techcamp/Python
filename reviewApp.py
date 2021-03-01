@@ -1,3 +1,4 @@
+# 関数の定義
 def post_review():
     # 変数の定義
     post = {}
@@ -14,15 +15,30 @@ def post_review():
     print("タイトル: " + post["title"] + line)
     print("感想: " + post["review"] + line)
 
+    # リストオブジェクトに追加
+    posts.append(post)
+
 def read_reviews():
-    pass
+    for (i, post) in enumerate(posts):
+        print('[' + str(i) + ']:' + post['title'] + "のレビュー")
+    print("見たいレビューの番号を入力してください：")
+    user_input = int(input())
+
+    post = posts[user_input]
+
+    line   = "\n---------------------------"
+    print("ジャンル: " + post["genre"] + line)
+    print("タイトル: " + post["title"] + line)
+    print("感想: " + post["review"] + line)
 
 def exception():
     print("入力された値は無効な値です")
 
+posts = [] #リストオブジェクトpostsの定義
+
 while True:
     # メニューの表示
-    print("レビュー数：0")
+    print("レビュー数： " + str(len(posts)))
     print("[0]レビューを書く")
     print("[1]レビューを読む")
     print("[2]アプリを終了する")

@@ -1,6 +1,4 @@
-pencil_case = ['pen', 'eracer', 'compass']
-print(len(pencil_case))
-
-pencil_case.append("memo")
-pencil_case.append("note")
-print(len(pencil_case))
+animals = ["dog", "cat", "rat"]
+for (number, animal) in enumerate(animals):
+    print(animal)
+    print(str(number) + "番目の動物は" + animal + "です。")
