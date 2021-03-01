@@ -1,4 +1,7 @@
-dict = {"title":  "Forrest Gump"}
-print(dict["title"])
-dict["title"] = "Spider man"
-print(dict["title"])
+value = -3
+if value > 0:
+    print("値は正です")
+elif value < 0:
+    print("値は負です")
+else:
+    print("値は0です")
