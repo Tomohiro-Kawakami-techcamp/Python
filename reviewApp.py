@@ -1,5 +1,8 @@
+print("ジャンルを入力して下さい")
 genre  = input()
+print("タイトルを入力して下さい")
 title  = input()
+print("感想を入力して下さい")
 review = input()
 line   = "\n---------------------------"
 
