@@ -1,3 +1,4 @@
-user_input = input()
-
-print("入力した値は" + user_input + "です")
+dict = {"title":  "Forrest Gump"}
+print(dict["title"])
+dict["title"] = "Spider man"
+print(dict["title"])
