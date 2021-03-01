@@ -20,22 +20,19 @@ def read_reviews():
 def exception():
     print("入力された値は無効な値です")
 
+while True:
+    # メニューの表示
+    print("レビュー数：0")
+    print("[0]レビューを書く")
+    print("[1]レビューを読む")
+    print("[2]アプリを終了する")
+    user_input = int(input())
 
-# メニューの表示
-print("レビュー数：0")
-print("[0]レビューを書く")
-print("[1]レビューを読む")
-print("[2]アプリを終了する")
-user_input = int(input())
-
-if user_input == 0:
-    post_review()         # post_review関数の呼び出し
-
-elif user_input == 1:
-    read_reviews()
-
-elif user_input == 2:
-    pass
-
-else:
-    exception()
+    if user_input == 0:
+        post_review()        # post_review関数の呼び出し
+    elif user_input == 1:
+        read_reviews()       # read_reviews関数の呼び出し
+    elif user_input == 2:
+        exit()
+    else:
+        exception()          # exception関数の呼び出し
