@@ -1,4 +1,5 @@
-def say_hello():
-    print("Hello World")
-
-say_hello()
+while True:
+    user_input = input()
+    if user_input == "exit":
+        exit()
+    print("ループ")

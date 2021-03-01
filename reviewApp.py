@@ -1,10 +1,5 @@
-print("レビュー数：0")
-print("[0]レビューを書く")
-print("[1]レビューを読む")
-print("[2]アプリを終了する")
-user_input = input()
-
-if user_input == 0:
+def post_review():
+    # 変数の定義
     post = {}
     print("ジャンルを入力してください：")
     post["genre"] = input()
@@ -13,12 +8,34 @@ if user_input == 0:
     print("感想を入力してください：")
     post["review"] = input()
     line = "\n---------------------------"
-    print("ジャンル : " + post["genre"] + line)
-    print("タイトル : " + post["title"] + line)
-    print("感想 :" + post["review"] + line)
-elif user_input == 1:
+
+    # レビューの描画
+    print("ジャンル: " + post["genre"] + line)
+    print("タイトル: " + post["title"] + line)
+    print("感想: " + post["review"] + line)
+
+def read_reviews():
     pass
+
+def exception():
+    print("入力された値は無効な値です")
+
+
+# メニューの表示
+print("レビュー数：0")
+print("[0]レビューを書く")
+print("[1]レビューを読む")
+print("[2]アプリを終了する")
+user_input = int(input())
+
+if user_input == 0:
+    post_review()         # post_review関数の呼び出し
+
+elif user_input == 1:
+    read_reviews()
+
 elif user_input == 2:
     pass
+
 else:
-    print("入力された値は無効な値です")
+    exception()
