@@ -5,7 +5,6 @@ print("[2]アプリを終了する")
 user_input = input()
 
 if user_input == 0:
-    # 変数の定義
     post = {}
     print("ジャンルを入力してください：")
     post["genre"] = input()
@@ -14,8 +13,6 @@ if user_input == 0:
     print("感想を入力してください：")
     post["review"] = input()
     line = "\n---------------------------"
-
-    # レビューの描画
     print("ジャンル : " + post["genre"] + line)
     print("タイトル : " + post["title"] + line)
     print("感想 :" + post["review"] + line)
